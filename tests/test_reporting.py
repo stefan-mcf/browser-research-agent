@@ -61,7 +61,7 @@ def test_render_markdown_report_contains_ranked_evidence_and_artifacts() -> None
     assert "strong audit evidence" in markdown
     assert "pages/page.png" in markdown
     assert "Scoring rubric" in markdown
-    assert "Methodology" in markdown
+    assert "How this report was generated" in markdown
     assert "Limitations" in markdown
 
 

@@ -28,13 +28,12 @@ $ mypy src
 Success: no issues found in 10 source files
 
 $ pytest -q
-.........................                                                [100%]
-25 passed in 1.75s
+25 passed
 
 $ python -m json.tool artifacts/demo/summary.json &gt;/dev/null
-summary.json valid
+JSON summary validated
 
 $ docker compose config &gt;/dev/null
-docker compose config valid
+Docker Compose configuration validated
 </pre></section></main></body>
 </html>

@@ -11,6 +11,15 @@ from browser_research_agent.agent import research_urls
 from browser_research_agent.models import PageResearchResult
 
 
+def _public_path(path: Path) -> str:
+    """Return a repo-relative artifact path without exposing host filesystem details."""
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        return resolved.name
+
+
 class ResearchRequest(BaseModel):
     objective: str = Field(min_length=3)
     urls: list[str] = Field(min_length=1)
@@ -85,8 +94,8 @@ async def research(request: ResearchRequest) -> ResearchResponse:
         strong_candidates=sum(1 for page in run.pages if page.scores.total >= 0.72),
         review_candidates=sum(1 for page in run.pages if 0.45 <= page.scores.total < 0.72),
         weak_candidates=sum(1 for page in run.pages if page.scores.total < 0.45),
-        summary_path=str((out_dir / "summary.json").resolve()),
-        report_path=str((out_dir / "report.md").resolve()) if request.report == "markdown" else None,
+        summary_path=_public_path(out_dir / "summary.json"),
+        report_path=_public_path(out_dir / "report.md") if request.report == "markdown" else None,
         pages=[_page_summary(page) for page in ranked_pages],
     )
 
@@ -101,6 +110,6 @@ def _page_summary(page: PageResearchResult) -> ResearchPageSummary:
         credibility=page.scores.credibility,
         freshness=page.scores.freshness,
         evidence_count=len(page.evidence),
-        artifact_paths={name: str(path.resolve()) for name, path in page.artifacts.items()},
+        artifact_paths={name: _public_path(path) for name, path in page.artifacts.items()},
         error=page.error.model_dump(mode="json") if page.error else None,
     )

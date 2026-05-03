@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "url": "demo://acme-trusthub/blog/product-update",
-    "final_url": "demo://acme-trusthub/blog/product-update",
+    "url": "file://tests/fixtures/vendor_blog.html",
+    "final_url": "file://tests/fixtures/vendor_blog.html",
     "title": "Acme TrustHub Product Blog",
     "description": "A product update mentioning compliance workflows and customer onboarding improvements.",
-    "canonical_url": "demo://acme-trusthub/blog/product-update",
-    "fetched_at": "2026-05-03T01:41:38.002257Z",
+    "canonical_url": "file:///blog/product-update",
+    "fetched_at": "2026-05-03T04:47:29.268679Z",
     "status_code": 200,
-    "elapsed_ms": 511,
+    "elapsed_ms": 524,
     "content_length": 892
   },
   "evidence": [
@@ -73,8 +73,8 @@
     }
   ],
   "links": [
-    "demo://acme-trusthub/blog",
-    "demo://acme-trusthub/security"
+    "file:///blog",
+    "file:///security"
   ],
   "scores": {
     "relevance": 0.9083,
@@ -150,9 +150,9 @@
     }
   },
   "artifacts": {
-    "html": "examples/sample-output/pages/02-unknown-url-b1add7b5.html",
-    "json": "examples/sample-output/pages/02-unknown-url-b1add7b5.json",
-    "screenshot": "examples/sample-output/pages/02-unknown-url-b1add7b5.png"
+    "html": "examples/sample-output/pages/02-vendor-blog-0da05732.html",
+    "json": "examples/sample-output/pages/02-vendor-blog-0da05732.json",
+    "screenshot": "examples/sample-output/pages/02-vendor-blog-0da05732.png"
   },
   "error": null
 }

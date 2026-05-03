@@ -9,10 +9,10 @@ The project is designed for repeatable research workflows where reviewers need a
 ## Value
 
 - Reduces repetitive web research work.
-- Produces evidence trails instead of opaque summaries.
+- Produces evidence trails instead of generic summaries.
 - Ranks sources so reviewers can focus on the strongest findings first.
 - Creates reusable artifacts: JSON, screenshots, captured HTML, and Markdown reports.
-- Keeps the core deterministic and auditable before optional LLM synthesis is added.
+- Keeps the core repeatable and auditable before optional AI-generated synthesis is added.
 
 ## Core loop
 
@@ -42,7 +42,7 @@ The repository includes:
 - a CLI for fixture-backed and live-URL research runs,
 - a local FastAPI service over the same research core,
 - a Dockerfile and Compose service for local container smoke tests,
-- deterministic synthetic fixtures and sample outputs,
+- simulated fixtures and sample outputs,
 - a screenshot evidence package under `docs/screenshots/`,
 - transparent scoring and output-schema documentation.
 

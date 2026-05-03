@@ -24,7 +24,7 @@
 <body><main class="frame"><section class="card"><div class="eyebrow">Browser Research Agent evidence</div><h1>Sample generated research report</h1><h1>Browser Research Report</h1>
 <br>
 <p>Objective: find SOC 2 audit reporting and vendor risk compliance evidence</p>
-<p>Created at: 2026-05-03T01:41:39.253947+00:00</p>
+<p>Created at: 2026-05-03T04:47:30.510367+00:00</p>
 <br>
 <h2>Executive summary</h2>
 <br>
@@ -38,18 +38,18 @@
 <h3>1. Acme TrustHub Security and Compliance</h3>
 <br>
 <ul>
-<li>URL: demo://acme-trusthub/security</li>
+<li>URL: file://tests/fixtures/vendor_security.html</li>
 <li>Total score: 0.7550</li>
 <li>Relevance: 1.0000</li>
 <li>Credibility: 0.3000</li>
 <li>Freshness: 1.0000</li>
 <li>Artifacts:</li>
 </ul>
-<p>  - html: `examples/sample-output/pages/01-unknown-url-98e34481.html`</p>
-<p>  - json: `examples/sample-output/pages/01-unknown-url-98e34481.json`</p>
-<p>  - screenshot: `examples/sample-output/pages/01-unknown-url-98e34481.png`</p>
+<p>  - html: `examples/sample-output/pages/01-vendor-security-117298b5.html`</p>
+<p>  - json: `examples/sample-output/pages/01-vendor-security-117298b5.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/01-vendor-security-117298b5.png`</p>
 <ul>
-<li>Why it scored this way:</li>
+<li>Scoring rationale:</li>
 </ul>
 <p>  - Matched objective terms: audit, compliance, report, risk, soc, vendor</p>
 <p>  - Extracted 8 evidence snippets</p>
@@ -68,18 +68,18 @@
 <h3>2. Acme TrustHub Product Blog</h3>
 <br>
 <ul>
-<li>URL: demo://acme-trusthub/blog/product-update</li>
+<li>URL: file://tests/fixtures/vendor_blog.html</li>
 <li>Total score: 0.6117</li>
 <li>Relevance: 0.9083</li>
 <li>Credibility: 0.3000</li>
 <li>Freshness: 0.3500</li>
 <li>Artifacts:</li>
 </ul>
-<p>  - html: `examples/sample-output/pages/02-unknown-url-b1add7b5.html`</p>
-<p>  - json: `examples/sample-output/pages/02-unknown-url-b1add7b5.json`</p>
-<p>  - screenshot: `examples/sample-output/pages/02-unknown-url-b1add7b5.png`</p>
+<p>  - html: `examples/sample-output/pages/02-vendor-blog-0da05732.html`</p>
+<p>  - json: `examples/sample-output/pages/02-vendor-blog-0da05732.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/02-vendor-blog-0da05732.png`</p>
 <ul>
-<li>Why it scored this way:</li>
+<li>Scoring rationale:</li>
 </ul>
 <p>  - Matched objective terms: audit, compliance, report, soc, vendor</p>
 <p>  - Extracted 5 evidence snippets</p>
@@ -98,37 +98,37 @@
 <h3>3. Acme TrustHub Careers</h3>
 <br>
 <ul>
-<li>URL: demo://acme-trusthub/careers</li>
+<li>URL: file://tests/fixtures/vendor_careers.html</li>
 <li>Total score: 0.0735</li>
 <li>Relevance: 0.0000</li>
 <li>Credibility: 0.0600</li>
 <li>Freshness: 0.3500</li>
 <li>Artifacts:</li>
 </ul>
-<p>  - html: `examples/sample-output/pages/03-unknown-url-a25f56ca.html`</p>
-<p>  - json: `examples/sample-output/pages/03-unknown-url-a25f56ca.json`</p>
-<p>  - screenshot: `examples/sample-output/pages/03-unknown-url-a25f56ca.png`</p>
+<p>  - html: `examples/sample-output/pages/03-vendor-careers-b45230f2.html`</p>
+<p>  - json: `examples/sample-output/pages/03-vendor-careers-b45230f2.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/03-vendor-careers-b45230f2.png`</p>
 <ul>
-<li>Why it scored this way:</li>
+<li>Scoring rationale:</li>
 </ul>
 <p>  - Credibility signals: report</p>
 <p>  - No explicit freshness date found</p>
 <br>
 <p>Evidence: none extracted.</p>
 <br>
-<h2>Methodology</h2>
+<h2>How this report was generated</h2>
 <br>
-<p>This report was generated from captured browser artifacts: page HTML, optional screenshot evidence, extracted metadata, links, and objective-matching snippets.</p>
-<p>Each page is scored deterministically so reviewers can inspect the evidence instead of trusting an opaque summary.</p>
+<p>This report was generated using data captured from web pages, including HTML, optional screenshots, extracted metadata, links, and snippets matching the research objective.</p>
+<p>Each page is scored with a consistent system so users can examine the evidence directly rather than relying on a generic summary.</p>
 <br>
 <h2>Limitations</h2>
 <br>
-<p>Scores are research triage signals, not final judgments. Review screenshots, HTML, and snippets before making business decisions.</p>
-<p>The MVP does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or LLM synthesis by default.</p>
+<p>Scores help prioritize research review; they are not final judgments. Review screenshots, HTML, and extracted snippets before making business decisions.</p>
+<p>The system does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or AI-generated synthesis by default.</p>
 <br>
 <h2>Scoring rubric</h2>
 <br>
 <p>Total score = 50% relevance + 35% credibility + 15% freshness.</p>
-<p>Scores rank captured evidence and should be reviewed alongside screenshots and HTML artifacts.</p>
+<p>Scores indicate the relevance of captured evidence and should be reviewed alongside screenshots and captured HTML.</p>
 <p>See `docs/scoring-rubric.md` for the full scoring explanation.</p></section></main></body>
 </html>

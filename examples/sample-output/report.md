@@ -1,7 +1,7 @@
 # Browser Research Report
 
 Objective: find SOC 2 audit reporting and vendor risk compliance evidence
-Created at: 2026-05-03T01:41:39.253947+00:00
+Created at: 2026-05-03T04:47:30.510367+00:00
 
 ## Executive summary
 
@@ -14,16 +14,16 @@ Weak candidates: 1
 
 ### 1. Acme TrustHub Security and Compliance
 
-- URL: demo://acme-trusthub/security
+- URL: file://tests/fixtures/vendor_security.html
 - Total score: 0.7550
 - Relevance: 1.0000
 - Credibility: 0.3000
 - Freshness: 1.0000
 - Artifacts:
-  - html: `examples/sample-output/pages/01-unknown-url-98e34481.html`
-  - json: `examples/sample-output/pages/01-unknown-url-98e34481.json`
-  - screenshot: `examples/sample-output/pages/01-unknown-url-98e34481.png`
-- Why it scored this way:
+  - html: `examples/sample-output/pages/01-vendor-security-117298b5.html`
+  - json: `examples/sample-output/pages/01-vendor-security-117298b5.json`
+  - screenshot: `examples/sample-output/pages/01-vendor-security-117298b5.png`
+- Scoring rationale:
   - Matched objective terms: audit, compliance, report, risk, soc, vendor
   - Extracted 8 evidence snippets
   - Credibility signals: about, compliance, documentation, report, security
@@ -38,16 +38,16 @@ Evidence:
 
 ### 2. Acme TrustHub Product Blog
 
-- URL: demo://acme-trusthub/blog/product-update
+- URL: file://tests/fixtures/vendor_blog.html
 - Total score: 0.6117
 - Relevance: 0.9083
 - Credibility: 0.3000
 - Freshness: 0.3500
 - Artifacts:
-  - html: `examples/sample-output/pages/02-unknown-url-b1add7b5.html`
-  - json: `examples/sample-output/pages/02-unknown-url-b1add7b5.json`
-  - screenshot: `examples/sample-output/pages/02-unknown-url-b1add7b5.png`
-- Why it scored this way:
+  - html: `examples/sample-output/pages/02-vendor-blog-0da05732.html`
+  - json: `examples/sample-output/pages/02-vendor-blog-0da05732.json`
+  - screenshot: `examples/sample-output/pages/02-vendor-blog-0da05732.png`
+- Scoring rationale:
   - Matched objective terms: audit, compliance, report, soc, vendor
   - Extracted 5 evidence snippets
   - Credibility signals: compliance, customers, documentation, report, security
@@ -62,33 +62,33 @@ Evidence:
 
 ### 3. Acme TrustHub Careers
 
-- URL: demo://acme-trusthub/careers
+- URL: file://tests/fixtures/vendor_careers.html
 - Total score: 0.0735
 - Relevance: 0.0000
 - Credibility: 0.0600
 - Freshness: 0.3500
 - Artifacts:
-  - html: `examples/sample-output/pages/03-unknown-url-a25f56ca.html`
-  - json: `examples/sample-output/pages/03-unknown-url-a25f56ca.json`
-  - screenshot: `examples/sample-output/pages/03-unknown-url-a25f56ca.png`
-- Why it scored this way:
+  - html: `examples/sample-output/pages/03-vendor-careers-b45230f2.html`
+  - json: `examples/sample-output/pages/03-vendor-careers-b45230f2.json`
+  - screenshot: `examples/sample-output/pages/03-vendor-careers-b45230f2.png`
+- Scoring rationale:
   - Credibility signals: report
   - No explicit freshness date found
 
 Evidence: none extracted.
 
-## Methodology
+## How this report was generated
 
-This report was generated from captured browser artifacts: page HTML, optional screenshot evidence, extracted metadata, links, and objective-matching snippets.
-Each page is scored deterministically so reviewers can inspect the evidence instead of trusting an opaque summary.
+This report was generated using data captured from web pages, including HTML, optional screenshots, extracted metadata, links, and snippets matching the research objective.
+Each page is scored with a consistent system so users can examine the evidence directly rather than relying on a generic summary.
 
 ## Limitations
 
-Scores are research triage signals, not final judgments. Review screenshots, HTML, and snippets before making business decisions.
-The MVP does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or LLM synthesis by default.
+Scores help prioritize research review; they are not final judgments. Review screenshots, HTML, and extracted snippets before making business decisions.
+The system does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or AI-generated synthesis by default.
 
 ## Scoring rubric
 
 Total score = 50% relevance + 35% credibility + 15% freshness.
-Scores rank captured evidence and should be reviewed alongside screenshots and HTML artifacts.
+Scores indicate the relevance of captured evidence and should be reviewed alongside screenshots and captured HTML.
 See `docs/scoring-rubric.md` for the full scoring explanation.

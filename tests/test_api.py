@@ -54,7 +54,7 @@ def test_research_endpoint_runs_fixture_backed_research() -> None:
     assert body["report_path"].endswith("report.md")
     assert Path(body["summary_path"]).exists()
     assert Path(body["report_path"]).exists()
-    assert Path(body["pages"][0]["artifact_paths"]["html"]).is_absolute()
+    assert not Path(body["pages"][0]["artifact_paths"]["html"]).is_absolute()
     assert Path(body["pages"][0]["artifact_paths"]["html"]).exists()
     assert body["pages"][0]["title"] == "Acme TrustHub Security and Compliance"
     assert body["pages"][0]["total_score"] > body["pages"][1]["total_score"]

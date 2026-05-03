@@ -1,10 +1,10 @@
 # API Guide
 
-Browser Research Agent now includes a local FastAPI surface over the same deterministic Playwright research core used by the CLI.
+Browser Research Agent provides a local FastAPI service over the same Playwright research core used by the CLI.
 
 ## Status
 
-- Local/private API proof: implemented.
+- Local API service: implemented.
 - Cloud deployment: not provisioned; local Docker deployment prep is documented in `docs/deployment.md`.
 - Authentication: not implemented; add before any public deployment.
 - LLM synthesis: not part of the API path.
@@ -45,7 +45,7 @@ Expected response:
 
 ## Research request
 
-Use committed synthetic fixtures for stable local proof:
+Use the included simulated pages for a stable local example:
 
 ```bash
 curl -fsS -X POST http://127.0.0.1:8000/research \
@@ -67,8 +67,8 @@ Response includes:
 
 - `status`: completed when the synchronous local run finishes.
 - `run_id`: generated identifier for the API request.
-- `summary_path`: local path to `summary.json`.
-- `report_path`: local path to `report.md` when Markdown reporting is enabled.
+- `summary_path`: path to `summary.json`, reported relative to the application working directory when possible.
+- `report_path`: path to `report.md` when Markdown reporting is enabled.
 - `pages`: ranked page summaries with scores, evidence counts, artifact paths, and any structured page error.
 
 A sanitized example response is committed at `examples/api-sample-output/research-response.json`.
@@ -89,7 +89,7 @@ A sanitized example response is committed at `examples/api-sample-output/researc
 
 ## Safety boundaries
 
-This API is a local proof surface. Before any public/cloud deployment, add explicit decisions for:
+This API is designed for local use by default. Before any public or hosted deployment, add explicit decisions for:
 
 - authentication/authorization,
 - target-site scope and permission,

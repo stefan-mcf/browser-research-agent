@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "url": "demo://acme-trusthub/security",
-    "final_url": "demo://acme-trusthub/security",
+    "url": "file://tests/fixtures/vendor_security.html",
+    "final_url": "file://tests/fixtures/vendor_security.html",
     "title": "Acme TrustHub Security and Compliance",
     "description": "SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers.",
-    "canonical_url": "demo://acme-trusthub/security",
-    "fetched_at": "2026-05-03T01:41:37.367015Z",
+    "canonical_url": "file:///security",
+    "fetched_at": "2026-05-03T04:47:28.637210Z",
     "status_code": 200,
-    "elapsed_ms": 516,
+    "elapsed_ms": 522,
     "content_length": 1029
   },
   "evidence": [
@@ -111,8 +111,8 @@
     }
   ],
   "links": [
-    "demo://acme-trusthub/legal/dpa",
-    "demo://acme-trusthub/trust"
+    "file:///legal/dpa",
+    "file:///trust"
   ],
   "scores": {
     "relevance": 1.0,
@@ -193,9 +193,9 @@
     }
   },
   "artifacts": {
-    "html": "examples/sample-output/pages/01-unknown-url-98e34481.html",
-    "json": "examples/sample-output/pages/01-unknown-url-98e34481.json",
-    "screenshot": "examples/sample-output/pages/01-unknown-url-98e34481.png"
+    "html": "examples/sample-output/pages/01-vendor-security-117298b5.html",
+    "json": "examples/sample-output/pages/01-vendor-security-117298b5.json",
+    "screenshot": "examples/sample-output/pages/01-vendor-security-117298b5.png"
   },
   "error": null
 }

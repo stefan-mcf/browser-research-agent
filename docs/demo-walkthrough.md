@@ -1,6 +1,6 @@
 # Demo Walkthrough
 
-This walkthrough uses deterministic synthetic fixtures so the project can be reviewed without crawling third-party websites.
+This walkthrough uses simulated pages so the project can be reviewed without crawling third-party websites.
 
 ## Run
 
@@ -15,9 +15,9 @@ bash examples/demo-command.sh
 - Review `artifacts/demo/summary.json` for machine-readable ranked results.
 - Inspect `artifacts/demo/pages/` for screenshots, HTML, and per-page JSON.
 
-## API proof
+## API example
 
-Run the local API separately when you want integration-style proof:
+Run the local API separately when you want an integration-style example:
 
 ```bash
 source .venv/bin/activate
@@ -32,11 +32,11 @@ Then inspect:
 
 ## Review positioning
 
-Browser Research Agent is a repeatable research workflow for people who need evidence-backed findings instead of opaque summaries. The included demo niche is SaaS vendor/compliance research: security pages, SOC 2 evidence, audit-reporting language, trust-center signals, and vendor-risk review.
+Browser Research Agent is a repeatable research workflow for people who need evidence-backed findings instead of generic summaries. The included demo niche is SaaS vendor and compliance research: security pages, SOC 2 evidence, audit-reporting language, trust-center signals, and vendor-risk review.
 
 ## Proof assets
 
-- `tests/fixtures/*.html`: synthetic compliance/security pages used for stable demos.
+- `tests/fixtures/*.html`: simulated compliance/security pages used for stable demos.
 - `examples/sample-output/report.md`: curated sample report generated from the fixtures.
 - `examples/sample-output/summary.json`: machine-readable ranked result.
 - `examples/api-sample-output/research-response.json`: sanitized sample API response.

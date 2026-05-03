@@ -1,19 +1,19 @@
 {
   "metadata": {
-    "url": "demo://acme-trusthub/careers",
-    "final_url": "demo://acme-trusthub/careers",
+    "url": "file://tests/fixtures/vendor_careers.html",
+    "final_url": "file://tests/fixtures/vendor_careers.html",
     "title": "Acme TrustHub Careers",
     "description": "Open roles and team culture notes.",
-    "canonical_url": "demo://acme-trusthub/careers",
-    "fetched_at": "2026-05-03T01:41:38.645157Z",
+    "canonical_url": "file:///careers",
+    "fetched_at": "2026-05-03T04:47:29.895771Z",
     "status_code": 200,
-    "elapsed_ms": 517,
+    "elapsed_ms": 515,
     "content_length": 746
   },
   "evidence": [],
   "links": [
-    "demo://acme-trusthub/about",
-    "demo://acme-trusthub/jobs"
+    "file:///about",
+    "file:///jobs"
   ],
   "scores": {
     "relevance": 0.0,
@@ -74,9 +74,9 @@
     }
   },
   "artifacts": {
-    "html": "examples/sample-output/pages/03-unknown-url-a25f56ca.html",
-    "json": "examples/sample-output/pages/03-unknown-url-a25f56ca.json",
-    "screenshot": "examples/sample-output/pages/03-unknown-url-a25f56ca.png"
+    "html": "examples/sample-output/pages/03-vendor-careers-b45230f2.html",
+    "json": "examples/sample-output/pages/03-vendor-careers-b45230f2.json",
+    "screenshot": "examples/sample-output/pages/03-vendor-careers-b45230f2.png"
   },
   "error": null
 }

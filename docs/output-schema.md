@@ -14,7 +14,7 @@ The Browser Research Agent writes a run-level `summary.json` plus one JSON file 
 - `evidence` (`array<EvidenceSnippet>`): ranked snippets matched to the objective.
 - `links` (`array<string>`): normalized links discovered on the page, capped for output size.
 - `scores` (`ScoreBreakdown`): relevance, credibility, freshness, confidence, total score, and reasons.
-- `artifacts` (`object`): local paths for captured `html`, optional `screenshot`, and per-page `json`.
+- `artifacts` (`object`): paths for captured `html`, optional `screenshot`, and per-page `json`.
 - `error` (`PageError | null`): structured failure data when navigation or capture partially failed.
 
 ## `PageMetadata`

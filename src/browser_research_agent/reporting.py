@@ -34,20 +34,20 @@ def render_markdown_report(run: ResearchRun) -> str:
 
     lines.extend(
         [
-            "## Methodology",
+            "## How this report was generated",
             "",
-            "This report was generated from captured browser artifacts: page HTML, optional screenshot evidence, extracted metadata, links, and objective-matching snippets.",
-            "Each page is scored deterministically so reviewers can inspect the evidence instead of trusting an opaque summary.",
+            "This report was generated using data captured from web pages, including HTML, optional screenshots, extracted metadata, links, and snippets matching the research objective.",
+            "Each page is scored with a consistent system so users can examine the evidence directly rather than relying on a generic summary.",
             "",
             "## Limitations",
             "",
-            "Scores are research triage signals, not final judgments. Review screenshots, HTML, and snippets before making business decisions.",
-            "The MVP does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or LLM synthesis by default.",
+            "Scores help prioritize research review; they are not final judgments. Review screenshots, HTML, and extracted snippets before making business decisions.",
+            "The system does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or AI-generated synthesis by default.",
             "",
             "## Scoring rubric",
             "",
             "Total score = 50% relevance + 35% credibility + 15% freshness.",
-            "Scores rank captured evidence and should be reviewed alongside screenshots and HTML artifacts.",
+            "Scores indicate the relevance of captured evidence and should be reviewed alongside screenshots and captured HTML.",
             "See `docs/scoring-rubric.md` for the full scoring explanation.",
             "",
         ]
@@ -80,7 +80,7 @@ def _render_page(rank: int, page: PageResearchResult) -> list[str]:
         for name, path in sorted(page.artifacts.items()):
             lines.append(f"  - {name}: `{path}`")
     if page.scores.reasons:
-        lines.append("- Why it scored this way:")
+        lines.append("- Scoring rationale:")
         for reason in page.scores.reasons[:8]:
             lines.append(f"  - {reason}")
     if page.evidence:

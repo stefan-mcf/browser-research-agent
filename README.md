@@ -1,6 +1,6 @@
 # Browser Research Agent
 
-Browser automation research agent with evidence extraction, deterministic artifacts, and transparent source scoring for repeatable web research workflows.
+Browser automation research agent with evidence extraction, repeatable outputs, and transparent source scoring for web research workflows.
 
 ## Features
 
@@ -22,7 +22,7 @@ python -m playwright install chromium
 bash examples/demo-command.sh
 ```
 
-The deterministic demo uses synthetic local fixtures and writes outputs under `artifacts/demo`.
+The demo uses simulated local fixtures and writes outputs under `artifacts/demo`.
 
 ## CLI
 
@@ -47,7 +47,7 @@ Output includes:
 
 ## API
 
-Run the local FastAPI surface over the same deterministic research core:
+Run the local FastAPI service over the same repeatable research core:
 
 ```bash
 source .venv/bin/activate
@@ -57,16 +57,16 @@ uvicorn browser_research_agent.api:app --host 127.0.0.1 --port 8000
 Useful local endpoints:
 
 - `GET /health`: health check.
-- `POST /research`: run a browser research job and return ranked page summaries, local artifact paths, and report/summary paths.
+- `POST /research`: run a browser research job and return ranked page summaries plus report and evidence paths.
 - `GET /docs`: interactive OpenAPI docs served by FastAPI.
 
-See `docs/api.md` for request examples and safety boundaries. Add authentication, rate limits, storage policy, and deployment review before exposing the API beyond trusted local/private environments.
+See `docs/api.md` for request examples and safety boundaries. Add authentication, rate limits, storage policy, and deployment review before exposing the API beyond trusted local environments.
 
 ## Demo package
 
 - `examples/request.json`: sample request shape.
-- `examples/demo-command.sh`: repeatable deterministic local demo command.
-- `examples/sample-output/`: curated sample report and summary JSON generated from synthetic fixtures.
+- `examples/demo-command.sh`: repeatable local demo command.
+- `examples/sample-output/`: curated sample report and summary JSON generated from simulated pages.
 - `examples/api-sample-output/research-response.json`: sanitized sample `POST /research` response.
 - `docs/demo-walkthrough.md`: short demo walkthrough.
 - `docs/product-brief.md`: product overview and extension points.
@@ -76,7 +76,7 @@ See `docs/api.md` for request examples and safety boundaries. Add authentication
 - `docs/api.md`: local FastAPI request/response guide.
 - `docs/deployment.md`: Docker/container deployment-prep runbook.
 - `docs/screenshots/`: visual evidence set.
-- `tests/fixtures/*.html`: synthetic SaaS compliance pages used for stable demos and tests.
+- `tests/fixtures/*.html`: simulated SaaS compliance pages used for stable demos and tests.
 - `Dockerfile`, `docker-compose.yml`, `.env.example`: local container contract; no cloud resources are provisioned by default.
 
 ## Intended use cases
@@ -96,14 +96,14 @@ The screenshot evidence set is available as full-size image links:
 - [API JSON response screenshot](docs/screenshots/03-api-json-response.png)
 - [Quality gates screenshot](docs/screenshots/04-quality-gates.png)
 
-The screenshots are generated from deterministic synthetic fixtures and local-only runs. They do not show a public cloud deployment, credentials, or live customer data.
+The screenshots are generated from simulated fixtures and local test runs. They do not show a public cloud deployment, credentials, or live customer data.
 
 ## Limitations
 
 - Manually supplied URLs only; search discovery is a planned adapter.
 - Local CLI, local FastAPI API, and local Docker/container smoke surfaces are implemented; hosted deployment is intentionally left to project-specific review.
 - No login automation, CAPTCHA bypass, paywall bypass, stealth scraping, authentication layer, or LLM synthesis by default.
-- Scores are triage signals and should be reviewed alongside captured artifacts.
+- Scores help prioritize research review and should be checked alongside captured evidence.
 - Live web research must respect target-site terms, robots/legal constraints, and data retention requirements.
 
 ## License

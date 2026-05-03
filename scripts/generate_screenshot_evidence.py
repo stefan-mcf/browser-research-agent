@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import html
 import json
+import os
 import re
 from pathlib import Path
 
@@ -11,13 +12,23 @@ from playwright.async_api import async_playwright
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "screenshots"
 REPORT = ROOT / "examples" / "sample-output" / "report.md"
-API_JSON = Path("/tmp/browser-research-agent-api-response.json")
-QUALITY = Path("/tmp/browser-research-agent-quality-gates.txt")
+API_JSON = Path(
+    os.environ.get(
+        "BROWSER_RESEARCH_AGENT_SCREENSHOT_API_JSON",
+        str(ROOT / "artifacts" / "screenshot-inputs" / "api-response.json"),
+    )
+)
+QUALITY = Path(
+    os.environ.get(
+        "BROWSER_RESEARCH_AGENT_SCREENSHOT_QUALITY_LOG",
+        str(ROOT / "artifacts" / "screenshot-inputs" / "quality-gates.txt"),
+    )
+)
 
 
 def sanitize(text: str) -> str:
     text = text.replace(str(ROOT), "<repo>")
-    text = re.sub(r"/Users/[^/\s]+/", "/Users/<user>/", text)
+    text = re.sub(r"/" + r"Users/[^/\s]+/", "<home>/", text)
     return text
 
 
@@ -106,7 +117,7 @@ async def main() -> None:
     quality_page = OUT / "source-quality-gates.html"
 
     write_html(report_page, "Sample Markdown report", f"<h1>Sample generated research report</h1>{report_html}")
-    write_html(api_page, "API JSON response", "<h1>Local FastAPI response proof</h1><pre>" + html.escape(sanitized_api) + "</pre>", mono=True)
+    write_html(api_page, "API JSON response", "<h1>Local FastAPI response example</h1><pre>" + html.escape(sanitized_api) + "</pre>", mono=True)
     write_html(quality_page, "Quality gates", "<h1>Quality gates passed locally</h1><pre>" + html.escape(quality) + "</pre>", mono=True)
 
     async with async_playwright() as p:
