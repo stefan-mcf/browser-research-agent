@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "url": "demo://acme-trusthub/careers",
+    "final_url": "demo://acme-trusthub/careers",
+    "title": "Acme TrustHub Careers",
+    "description": "Open roles and team culture notes.",
+    "canonical_url": "demo://acme-trusthub/careers",
+    "fetched_at": "2026-05-03T01:41:38.645157Z",
+    "status_code": 200,
+    "elapsed_ms": 517,
+    "content_length": 746
+  },
+  "evidence": [],
+  "links": [
+    "demo://acme-trusthub/about",
+    "demo://acme-trusthub/jobs"
+  ],
+  "scores": {
+    "relevance": 0.0,
+    "credibility": 0.06,
+    "freshness": 0.35,
+    "confidence": 0.7,
+    "total": 0.0735,
+    "reasons": [
+      "Credibility signals: report",
+      "No explicit freshness date found"
+    ],
+    "relevance_reasons": [],
+    "credibility_reasons": [
+      "Credibility signals: report"
+    ],
+    "freshness_reasons": [
+      "No explicit freshness date found"
+    ],
+    "weights": {
+      "relevance": 0.5,
+      "credibility": 0.35,
+      "freshness": 0.15
+    },
+    "details": {
+      "relevance": {
+        "matched_terms": [],
+        "objective_terms": [
+          "audit",
+          "compliance",
+          "report",
+          "risk",
+          "soc",
+          "vendor"
+        ],
+        "keyword_score": 0.0,
+        "evidence_score": 0.0,
+        "evidence_count": 0
+      },
+      "credibility": {
+        "https": false,
+        "high_trust_tld": false,
+        "credibility_signals": [
+          "report"
+        ],
+        "outbound_domain_count": 0,
+        "signal_score": 0.06,
+        "outbound_score": 0.0
+      },
+      "freshness": {
+        "newest_date": null,
+        "age_days": null,
+        "date_candidates": []
+      },
+      "confidence": {
+        "score": 0.7,
+        "basis": "metadata, evidence, and detected-date completeness"
+      }
+    }
+  },
+  "artifacts": {
+    "html": "examples/sample-output/pages/03-unknown-url-a25f56ca.html",
+    "json": "examples/sample-output/pages/03-unknown-url-a25f56ca.json",
+    "screenshot": "examples/sample-output/pages/03-unknown-url-a25f56ca.png"
+  },
+  "error": null
+}

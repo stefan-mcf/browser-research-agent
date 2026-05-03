@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "url": "demo://acme-trusthub/security",
+    "final_url": "demo://acme-trusthub/security",
+    "title": "Acme TrustHub Security and Compliance",
+    "description": "SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers.",
+    "canonical_url": "demo://acme-trusthub/security",
+    "fetched_at": "2026-05-03T01:41:37.367015Z",
+    "status_code": 200,
+    "elapsed_ms": 516,
+    "content_length": 1029
+  },
+  "evidence": [
+    {
+      "text": "SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers.",
+      "score": 1.0,
+      "matched_terms": [
+        "audit",
+        "report",
+        "risk",
+        "soc",
+        "vendor"
+      ],
+      "source": "heading_or_summary",
+      "context_before": "Acme TrustHub Security and Compliance",
+      "context_after": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams."
+    },
+    {
+      "text": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams. The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026.",
+      "score": 0.9885,
+      "matched_terms": [
+        "audit",
+        "report",
+        "risk",
+        "soc",
+        "vendor"
+      ],
+      "source": "body",
+      "context_before": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams.",
+      "context_after": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams."
+    },
+    {
+      "text": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026. Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows.",
+      "score": 0.8205,
+      "matched_terms": [
+        "audit",
+        "compliance",
+        "report",
+        "vendor"
+      ],
+      "source": "body",
+      "context_before": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026.",
+      "context_after": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026."
+    },
+    {
+      "text": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams.",
+      "score": 0.7608,
+      "matched_terms": [
+        "risk",
+        "soc",
+        "vendor"
+      ],
+      "source": "heading_or_summary",
+      "context_before": "SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers.",
+      "context_after": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams. The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026."
+    },
+    {
+      "text": "Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows.",
+      "score": 0.7608,
+      "matched_terms": [
+        "compliance",
+        "report",
+        "vendor"
+      ],
+      "source": "body",
+      "context_before": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026.",
+      "context_after": "Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows."
+    },
+    {
+      "text": "Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows. Unrelated marketing sentence about beautiful dashboards and modern collaboration.",
+      "score": 0.68,
+      "matched_terms": [
+        "compliance",
+        "report",
+        "vendor"
+      ],
+      "source": "body",
+      "context_before": "Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows.",
+      "context_after": "Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows."
+    },
+    {
+      "text": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026.",
+      "score": 0.5362,
+      "matched_terms": [
+        "audit",
+        "report"
+      ],
+      "source": "body",
+      "context_before": "Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams.",
+      "context_after": "The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026."
+    },
+    {
+      "text": "Acme TrustHub Security and Compliance",
+      "score": 0.3017,
+      "matched_terms": [
+        "compliance"
+      ],
+      "source": "title_or_meta",
+      "context_before": null,
+      "context_after": "SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers."
+    }
+  ],
+  "links": [
+    "demo://acme-trusthub/legal/dpa",
+    "demo://acme-trusthub/trust"
+  ],
+  "scores": {
+    "relevance": 1.0,
+    "credibility": 0.3,
+    "freshness": 1.0,
+    "confidence": 1.0,
+    "total": 0.755,
+    "reasons": [
+      "Matched objective terms: audit, compliance, report, risk, soc, vendor",
+      "Extracted 8 evidence snippets",
+      "Credibility signals: about, compliance, documentation, report, security",
+      "Newest detected date: 2026-05-03"
+    ],
+    "relevance_reasons": [
+      "Matched objective terms: audit, compliance, report, risk, soc, vendor",
+      "Extracted 8 evidence snippets"
+    ],
+    "credibility_reasons": [
+      "Credibility signals: about, compliance, documentation, report, security"
+    ],
+    "freshness_reasons": [
+      "Newest detected date: 2026-05-03"
+    ],
+    "weights": {
+      "relevance": 0.5,
+      "credibility": 0.35,
+      "freshness": 0.15
+    },
+    "details": {
+      "relevance": {
+        "matched_terms": [
+          "audit",
+          "compliance",
+          "report",
+          "risk",
+          "soc",
+          "vendor"
+        ],
+        "objective_terms": [
+          "audit",
+          "compliance",
+          "report",
+          "risk",
+          "soc",
+          "vendor"
+        ],
+        "keyword_score": 1.0,
+        "evidence_score": 1.0,
+        "evidence_count": 8
+      },
+      "credibility": {
+        "https": false,
+        "high_trust_tld": false,
+        "credibility_signals": [
+          "about",
+          "compliance",
+          "documentation",
+          "report",
+          "security"
+        ],
+        "outbound_domain_count": 0,
+        "signal_score": 0.3,
+        "outbound_score": 0.0
+      },
+      "freshness": {
+        "newest_date": "2026-05-03",
+        "age_days": 0,
+        "date_candidates": [
+          "2026-05-03",
+          "2026-05-03",
+          "2026-05-03"
+        ]
+      },
+      "confidence": {
+        "score": 1.0,
+        "basis": "metadata, evidence, and detected-date completeness"
+      }
+    }
+  },
+  "artifacts": {
+    "html": "examples/sample-output/pages/01-unknown-url-98e34481.html",
+    "json": "examples/sample-output/pages/01-unknown-url-98e34481.json",
+    "screenshot": "examples/sample-output/pages/01-unknown-url-98e34481.png"
+  },
+  "error": null
+}

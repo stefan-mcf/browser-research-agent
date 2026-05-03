@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Sample Markdown report</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #0b1020; color: #e5ecff; font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; }
+    .frame { max-width: 1120px; margin: 0 auto; padding: 42px; }
+    .card { background: linear-gradient(180deg, #111936 0%, #0f172a 100%); border: 1px solid #263456; border-radius: 22px; padding: 34px; box-shadow: 0 24px 80px rgba(0,0,0,.35); }
+    .eyebrow { color: #8bd5ff; text-transform: uppercase; letter-spacing: .15em; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+    h1 { margin: 0 0 18px; font-size: 34px; line-height: 1.1; }
+    h2 { color: #c7d2fe; margin-top: 30px; }
+    h3 { color: #bae6fd; margin-top: 22px; }
+    p, li { color: #d8e1ff; font-size: 16px; line-height: 1.55; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; color: #d9f99d; background: #050816; border: 1px solid #22304f; border-radius: 16px; padding: 22px; font-size: 14px; line-height: 1.45; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .shot { background: #080d1d; border: 1px solid #263456; border-radius: 16px; padding: 14px; }
+    .shot img { width: 100%; border-radius: 10px; border: 1px solid #334155; display: block; }
+    .shot h3 { margin: 12px 0 4px; font-size: 16px; }
+    .muted { color: #94a3b8; font-size: 14px; }
+  </style>
+</head>
+<body><main class="frame"><section class="card"><div class="eyebrow">Browser Research Agent evidence</div><h1>Sample generated research report</h1><h1>Browser Research Report</h1>
+<br>
+<p>Objective: find SOC 2 audit reporting and vendor risk compliance evidence</p>
+<p>Created at: 2026-05-03T01:41:39.253947+00:00</p>
+<br>
+<h2>Executive summary</h2>
+<br>
+<p>Captured pages: 3</p>
+<p>Strong candidates: 1</p>
+<p>Review candidates: 1</p>
+<p>Weak candidates: 1</p>
+<br>
+<h2>Ranked findings</h2>
+<br>
+<h3>1. Acme TrustHub Security and Compliance</h3>
+<br>
+<ul>
+<li>URL: demo://acme-trusthub/security</li>
+<li>Total score: 0.7550</li>
+<li>Relevance: 1.0000</li>
+<li>Credibility: 0.3000</li>
+<li>Freshness: 1.0000</li>
+<li>Artifacts:</li>
+</ul>
+<p>  - html: `examples/sample-output/pages/01-unknown-url-98e34481.html`</p>
+<p>  - json: `examples/sample-output/pages/01-unknown-url-98e34481.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/01-unknown-url-98e34481.png`</p>
+<ul>
+<li>Why it scored this way:</li>
+</ul>
+<p>  - Matched objective terms: audit, compliance, report, risk, soc, vendor</p>
+<p>  - Extracted 8 evidence snippets</p>
+<p>  - Credibility signals: about, compliance, documentation, report, security</p>
+<p>  - Newest detected date: 2026-05-03</p>
+<br>
+<p>Evidence:</p>
+<ul>
+<li>(1.00; audit, report, risk, soc, vendor) SOC 2, ISO 27001, vendor risk, and audit reporting evidence for enterprise buyers.</li>
+<li>(0.99; audit, report, risk, soc, vendor) Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams. The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026.</li>
+<li>(0.82; audit, compliance, report, vendor) The trust center includes audit reports, encryption details, uptime history, subprocessors, and data processing commitments updated in 2026. Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows.</li>
+<li>(0.76; risk, soc, vendor) Acme TrustHub publishes SOC 2 Type II controls, ISO 27001 policy coverage, and vendor risk documentation for procurement teams.</li>
+<li>(0.76; compliance, report, vendor) Security reviewers can export compliance evidence for board reporting, customer questionnaires, and vendor due diligence workflows.</li>
+</ul>
+<br>
+<h3>2. Acme TrustHub Product Blog</h3>
+<br>
+<ul>
+<li>URL: demo://acme-trusthub/blog/product-update</li>
+<li>Total score: 0.6117</li>
+<li>Relevance: 0.9083</li>
+<li>Credibility: 0.3000</li>
+<li>Freshness: 0.3500</li>
+<li>Artifacts:</li>
+</ul>
+<p>  - html: `examples/sample-output/pages/02-unknown-url-b1add7b5.html`</p>
+<p>  - json: `examples/sample-output/pages/02-unknown-url-b1add7b5.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/02-unknown-url-b1add7b5.png`</p>
+<ul>
+<li>Why it scored this way:</li>
+</ul>
+<p>  - Matched objective terms: audit, compliance, report, soc, vendor</p>
+<p>  - Extracted 5 evidence snippets</p>
+<p>  - Credibility signals: compliance, customers, documentation, report, security</p>
+<p>  - No explicit freshness date found</p>
+<br>
+<p>Evidence:</p>
+<ul>
+<li>(1.00; audit, compliance, report, soc, vendor) Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests. The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence.</li>
+<li>(0.95; audit, compliance, report, soc) The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence.</li>
+<li>(0.83; audit, compliance, report, soc) The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence. Customers can use the checklist to prepare security review materials before sending them to enterprise buyers.</li>
+<li>(0.38; compliance) A product update mentioning compliance workflows and customer onboarding improvements.</li>
+<li>(0.36; vendor) Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests.</li>
+</ul>
+<br>
+<h3>3. Acme TrustHub Careers</h3>
+<br>
+<ul>
+<li>URL: demo://acme-trusthub/careers</li>
+<li>Total score: 0.0735</li>
+<li>Relevance: 0.0000</li>
+<li>Credibility: 0.0600</li>
+<li>Freshness: 0.3500</li>
+<li>Artifacts:</li>
+</ul>
+<p>  - html: `examples/sample-output/pages/03-unknown-url-a25f56ca.html`</p>
+<p>  - json: `examples/sample-output/pages/03-unknown-url-a25f56ca.json`</p>
+<p>  - screenshot: `examples/sample-output/pages/03-unknown-url-a25f56ca.png`</p>
+<ul>
+<li>Why it scored this way:</li>
+</ul>
+<p>  - Credibility signals: report</p>
+<p>  - No explicit freshness date found</p>
+<br>
+<p>Evidence: none extracted.</p>
+<br>
+<h2>Methodology</h2>
+<br>
+<p>This report was generated from captured browser artifacts: page HTML, optional screenshot evidence, extracted metadata, links, and objective-matching snippets.</p>
+<p>Each page is scored deterministically so reviewers can inspect the evidence instead of trusting an opaque summary.</p>
+<br>
+<h2>Limitations</h2>
+<br>
+<p>Scores are research triage signals, not final judgments. Review screenshots, HTML, and snippets before making business decisions.</p>
+<p>The MVP does not perform login automation, CAPTCHA bypass, paywall bypass, search discovery, or LLM synthesis by default.</p>
+<br>
+<h2>Scoring rubric</h2>
+<br>
+<p>Total score = 50% relevance + 35% credibility + 15% freshness.</p>
+<p>Scores rank captured evidence and should be reviewed alongside screenshots and HTML artifacts.</p>
+<p>See `docs/scoring-rubric.md` for the full scoring explanation.</p></section></main></body>
+</html>

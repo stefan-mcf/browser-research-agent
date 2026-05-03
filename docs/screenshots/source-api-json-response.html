@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>API JSON response</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #0b1020; color: #e5ecff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .frame { max-width: 1120px; margin: 0 auto; padding: 42px; }
+    .card { background: linear-gradient(180deg, #111936 0%, #0f172a 100%); border: 1px solid #263456; border-radius: 22px; padding: 34px; box-shadow: 0 24px 80px rgba(0,0,0,.35); }
+    .eyebrow { color: #8bd5ff; text-transform: uppercase; letter-spacing: .15em; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+    h1 { margin: 0 0 18px; font-size: 34px; line-height: 1.1; }
+    h2 { color: #c7d2fe; margin-top: 30px; }
+    h3 { color: #bae6fd; margin-top: 22px; }
+    p, li { color: #d8e1ff; font-size: 16px; line-height: 1.55; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; color: #d9f99d; background: #050816; border: 1px solid #22304f; border-radius: 16px; padding: 22px; font-size: 14px; line-height: 1.45; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .shot { background: #080d1d; border: 1px solid #263456; border-radius: 16px; padding: 14px; }
+    .shot img { width: 100%; border-radius: 10px; border: 1px solid #334155; display: block; }
+    .shot h3 { margin: 12px 0 4px; font-size: 16px; }
+    .muted { color: #94a3b8; font-size: 14px; }
+  </style>
+</head>
+<body><main class="frame"><section class="card"><div class="eyebrow">Browser Research Agent evidence</div><h1>Local FastAPI response proof</h1><pre>{
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;run_id&quot;: &quot;b18047a88f9c&quot;,
+  &quot;objective&quot;: &quot;find SOC 2 audit reporting and vendor risk compliance evidence&quot;,
+  &quot;page_count&quot;: 3,
+  &quot;strong_candidates&quot;: 1,
+  &quot;review_candidates&quot;: 1,
+  &quot;weak_candidates&quot;: 1,
+  &quot;summary_path&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/summary.json&quot;,
+  &quot;report_path&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/report.md&quot;,
+  &quot;pages&quot;: [
+    {
+      &quot;title&quot;: &quot;Acme TrustHub Security and Compliance&quot;,
+      &quot;url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_security.html&quot;,
+      &quot;final_url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_security.html&quot;,
+      &quot;total_score&quot;: 0.755,
+      &quot;relevance&quot;: 1.0,
+      &quot;credibility&quot;: 0.3,
+      &quot;freshness&quot;: 1.0,
+      &quot;evidence_count&quot;: 8,
+      &quot;artifact_paths&quot;: {
+        &quot;html&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/01-unknown-url-98e34481.html&quot;,
+        &quot;json&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/01-unknown-url-98e34481.json&quot;
+      },
+      &quot;error&quot;: null
+    },
+    {
+      &quot;title&quot;: &quot;Acme TrustHub Product Blog&quot;,
+      &quot;url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_blog.html&quot;,
+      &quot;final_url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_blog.html&quot;,
+      &quot;total_score&quot;: 0.6117,
+      &quot;relevance&quot;: 0.9083,
+      &quot;credibility&quot;: 0.3,
+      &quot;freshness&quot;: 0.35,
+      &quot;evidence_count&quot;: 5,
+      &quot;artifact_paths&quot;: {
+        &quot;html&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/02-unknown-url-b1add7b5.html&quot;,
+        &quot;json&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/02-unknown-url-b1add7b5.json&quot;
+      },
+      &quot;error&quot;: null
+    },
+    {
+      &quot;title&quot;: &quot;Acme TrustHub Careers&quot;,
+      &quot;url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_careers.html&quot;,
+      &quot;final_url&quot;: &quot;file://&lt;repo&gt;/tests/fixtures/vendor_careers.html&quot;,
+      &quot;total_score&quot;: 0.0735,
+      &quot;relevance&quot;: 0.0,
+      &quot;credibility&quot;: 0.06,
+      &quot;freshness&quot;: 0.35,
+      &quot;evidence_count&quot;: 0,
+      &quot;artifact_paths&quot;: {
+        &quot;html&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/03-unknown-url-a25f56ca.html&quot;,
+        &quot;json&quot;: &quot;&lt;repo&gt;/artifacts/screenshot-api/pages/03-unknown-url-a25f56ca.json&quot;
+      },
+      &quot;error&quot;: null
+    }
+  ]
+}</pre></section></main></body>
+</html>

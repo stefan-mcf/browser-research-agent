@@ -1,0 +1,58 @@
+{
+  "status": "completed",
+  "run_id": "c26bcdc68a45",
+  "objective": "find SOC 2 audit reporting and vendor risk compliance evidence",
+  "page_count": 3,
+  "strong_candidates": 1,
+  "review_candidates": 1,
+  "weak_candidates": 1,
+  "summary_path": "<repo>/artifacts/api-demo/summary.json",
+  "report_path": "<repo>/artifacts/api-demo/report.md",
+  "pages": [
+    {
+      "title": "Acme TrustHub Security and Compliance",
+      "url": "demo-fixture://repo/tests/fixtures/vendor_security.html",
+      "final_url": "demo-fixture://repo/tests/fixtures/vendor_security.html",
+      "total_score": 0.755,
+      "relevance": 1.0,
+      "credibility": 0.3,
+      "freshness": 1.0,
+      "evidence_count": 8,
+      "artifact_paths": {
+        "html": "<repo>/artifacts/api-demo/pages/01-unknown-url-98e34481.html",
+        "json": "<repo>/artifacts/api-demo/pages/01-unknown-url-98e34481.json"
+      },
+      "error": null
+    },
+    {
+      "title": "Acme TrustHub Product Blog",
+      "url": "demo-fixture://repo/tests/fixtures/vendor_blog.html",
+      "final_url": "demo-fixture://repo/tests/fixtures/vendor_blog.html",
+      "total_score": 0.6117,
+      "relevance": 0.9083,
+      "credibility": 0.3,
+      "freshness": 0.35,
+      "evidence_count": 5,
+      "artifact_paths": {
+        "html": "<repo>/artifacts/api-demo/pages/02-unknown-url-b1add7b5.html",
+        "json": "<repo>/artifacts/api-demo/pages/02-unknown-url-b1add7b5.json"
+      },
+      "error": null
+    },
+    {
+      "title": "Acme TrustHub Careers",
+      "url": "demo-fixture://repo/tests/fixtures/vendor_careers.html",
+      "final_url": "demo-fixture://repo/tests/fixtures/vendor_careers.html",
+      "total_score": 0.0735,
+      "relevance": 0.0,
+      "credibility": 0.06,
+      "freshness": 0.35,
+      "evidence_count": 0,
+      "artifact_paths": {
+        "html": "<repo>/artifacts/api-demo/pages/03-unknown-url-a25f56ca.html",
+        "json": "<repo>/artifacts/api-demo/pages/03-unknown-url-a25f56ca.json"
+      },
+      "error": null
+    }
+  ]
+}

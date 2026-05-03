@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "url": "demo://acme-trusthub/blog/product-update",
+    "final_url": "demo://acme-trusthub/blog/product-update",
+    "title": "Acme TrustHub Product Blog",
+    "description": "A product update mentioning compliance workflows and customer onboarding improvements.",
+    "canonical_url": "demo://acme-trusthub/blog/product-update",
+    "fetched_at": "2026-05-03T01:41:38.002257Z",
+    "status_code": 200,
+    "elapsed_ms": 511,
+    "content_length": 892
+  },
+  "evidence": [
+    {
+      "text": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests. The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence.",
+      "score": 1.0,
+      "matched_terms": [
+        "audit",
+        "compliance",
+        "report",
+        "soc",
+        "vendor"
+      ],
+      "source": "heading_or_summary",
+      "context_before": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests.",
+      "context_after": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests."
+    },
+    {
+      "text": "The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence.",
+      "score": 0.9524,
+      "matched_terms": [
+        "audit",
+        "compliance",
+        "report",
+        "soc"
+      ],
+      "source": "body",
+      "context_before": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests.",
+      "context_after": "The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence."
+    },
+    {
+      "text": "The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence. Customers can use the checklist to prepare security review materials before sending them to enterprise buyers.",
+      "score": 0.8267,
+      "matched_terms": [
+        "audit",
+        "compliance",
+        "report",
+        "soc"
+      ],
+      "source": "body",
+      "context_before": "The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence.",
+      "context_after": "The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence."
+    },
+    {
+      "text": "A product update mentioning compliance workflows and customer onboarding improvements.",
+      "score": 0.3817,
+      "matched_terms": [
+        "compliance"
+      ],
+      "source": "title_or_meta",
+      "context_before": null,
+      "context_after": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests."
+    },
+    {
+      "text": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests.",
+      "score": 0.3567,
+      "matched_terms": [
+        "vendor"
+      ],
+      "source": "heading_or_summary",
+      "context_before": "A product update mentioning compliance workflows and customer onboarding improvements.",
+      "context_after": "Acme TrustHub added onboarding checklists for procurement teams and a dashboard for vendor documentation requests. The update mentions compliance workflows, customer questionnaires, and report exports, but it does not provide SOC 2 audit evidence."
+    }
+  ],
+  "links": [
+    "demo://acme-trusthub/blog",
+    "demo://acme-trusthub/security"
+  ],
+  "scores": {
+    "relevance": 0.9083,
+    "credibility": 0.3,
+    "freshness": 0.35,
+    "confidence": 0.9,
+    "total": 0.6117,
+    "reasons": [
+      "Matched objective terms: audit, compliance, report, soc, vendor",
+      "Extracted 5 evidence snippets",
+      "Credibility signals: compliance, customers, documentation, report, security",
+      "No explicit freshness date found"
+    ],
+    "relevance_reasons": [
+      "Matched objective terms: audit, compliance, report, soc, vendor",
+      "Extracted 5 evidence snippets"
+    ],
+    "credibility_reasons": [
+      "Credibility signals: compliance, customers, documentation, report, security"
+    ],
+    "freshness_reasons": [
+      "No explicit freshness date found"
+    ],
+    "weights": {
+      "relevance": 0.5,
+      "credibility": 0.35,
+      "freshness": 0.15
+    },
+    "details": {
+      "relevance": {
+        "matched_terms": [
+          "audit",
+          "compliance",
+          "report",
+          "soc",
+          "vendor"
+        ],
+        "objective_terms": [
+          "audit",
+          "compliance",
+          "report",
+          "risk",
+          "soc",
+          "vendor"
+        ],
+        "keyword_score": 0.8333,
+        "evidence_score": 1.0,
+        "evidence_count": 5
+      },
+      "credibility": {
+        "https": false,
+        "high_trust_tld": false,
+        "credibility_signals": [
+          "compliance",
+          "customers",
+          "documentation",
+          "report",
+          "security"
+        ],
+        "outbound_domain_count": 0,
+        "signal_score": 0.3,
+        "outbound_score": 0.0
+      },
+      "freshness": {
+        "newest_date": null,
+        "age_days": null,
+        "date_candidates": []
+      },
+      "confidence": {
+        "score": 0.9,
+        "basis": "metadata, evidence, and detected-date completeness"
+      }
+    }
+  },
+  "artifacts": {
+    "html": "examples/sample-output/pages/02-unknown-url-b1add7b5.html",
+    "json": "examples/sample-output/pages/02-unknown-url-b1add7b5.json",
+    "screenshot": "examples/sample-output/pages/02-unknown-url-b1add7b5.png"
+  },
+  "error": null
+}
