@@ -1,6 +1,6 @@
 # Browser Research Agent
 
-Browser automation research agent with evidence extraction, repeatable outputs, and transparent source scoring for web research workflows.
+Domain-agnostic browser automation research engine. Provide an objective and URLs — the agent handles browser automation, evidence extraction, and transparent source scoring for any research domain: vendor due diligence, market research, competitor analysis, real estate intelligence, job market scanning, academic literature review, or any repeatable web research workflow.
 
 ## Features
 
@@ -11,6 +11,20 @@ Browser automation research agent with evidence extraction, repeatable outputs, 
 - Writes ranked JSON and Markdown reports for downstream review.
 - Exposes the same research core through a CLI and a local FastAPI service.
 - Keeps failures visible as structured page errors instead of failing an entire run.
+- Domain-agnostic core — swap fixtures, objectives, and URLs to target any research domain.
+
+## Use cases
+
+The same engine powers research across many domains. Examples:
+
+| Domain | Sample objective |
+|--------|------------------|
+| Vendor due diligence | "Find SOC 2 audit evidence, security certifications, and data-residency commitments" |
+| Market research | "Identify pricing tiers, target segments, and competitive positioning across these SaaS landing pages" |
+| Real estate intelligence | "Extract property details, agent contact information, and listing history for these 15 properties" |
+| Job market scanning | "Find AI automation roles with Python, FastAPI, and multi-agent requirements posted this week" |
+| Competitor analysis | "Map feature claims, integrations listed, and customer logos from these competitor homepages" |
+| Academic literature review | "Extract methodology sections, dataset references, and author affiliations from these paper pages" |
 
 ## Quick start
 
@@ -29,11 +43,19 @@ The demo uses simulated local fixtures and writes outputs under `artifacts/demo`
 Run a research job against one or more URLs:
 
 ```bash
+# Vendor due diligence example
 browser-research-agent research \
-  --objective "research question or buying criterion" \
-  --url https://vendor-a.example \
-  --url https://vendor-b.example/security \
+  --objective "find SOC 2 audit reporting and vendor risk compliance evidence" \
+  --url https://vendor-a.example/security \
+  --url https://vendor-b.example/trust \
   --out artifacts/run-001 \
+  --headless
+
+# Job market intelligence example (same engine, different domain)
+browser-research-agent research \
+  --objective "identify AI automation roles requiring Python, FastAPI, and multi-agent experience" \
+  --url https://example-job-board.example/search?q=ai+automation \
+  --out artifacts/run-002 \
   --headless
 ```
 
@@ -64,48 +86,55 @@ See `docs/api.md` for request examples and safety boundaries. Add authentication
 
 ## Demo package
 
+The bundled demo uses SaaS vendor compliance fixtures as one example domain. The core engine is domain-agnostic — swap the fixtures and objective to target any research domain.
+
 - `examples/request.json`: sample request shape.
-- `examples/demo-command.sh`: repeatable local demo command.
+- `examples/demo-command.sh`: repeatable local demo command (vendor compliance domain).
 - `examples/sample-output/`: curated sample report and summary JSON generated from simulated pages.
 - `examples/api-sample-output/research-response.json`: sanitized sample `POST /research` response.
 - `docs/demo-walkthrough.md`: short demo walkthrough.
-- `docs/product-brief.md`: product overview and extension points.
-- `docs/architecture.md`: implementation architecture.
+- `tests/fixtures/*.html`: simulated pages used for stable demos and tests.
+- `docs/product-brief.md`: broader product concept and extension points.
+- `docs/architecture.md`: implementation architecture and data flow.
 - `docs/output-schema.md`: JSON output contract.
 - `docs/scoring-rubric.md`: transparent scoring explanation.
-- `docs/api.md`: local FastAPI request/response guide.
-- `docs/deployment.md`: Docker/container deployment-prep runbook.
-- `docs/screenshots/`: visual evidence set.
-- `tests/fixtures/*.html`: simulated SaaS compliance pages used for stable demos and tests.
-- `Dockerfile`, `docker-compose.yml`, `.env.example`: local container contract; no cloud resources are provisioned by default.
+- `docs/api.md`: local FastAPI request/response guide and safety notes.
+- `docs/screenshots/`: curated visual evidence set: OpenAPI docs, sample report, API response, and quality gates.
 
-## Intended use cases
+## Running tests
 
-- SaaS vendor and compliance research.
-- Vendor due diligence.
-- Market and competitor research.
-- Procurement shortlist scoring.
-- Lead qualification with evidence trails.
+```bash
+source .venv/bin/activate
+pip install -e '.[dev]'
+pytest -q
+ruff check src tests
+```
 
-## Visual evidence
+## Local Docker smoke test
 
-The screenshot evidence set is available as full-size image links:
+```bash
+docker build -t browser-research-agent .
+docker run --rm browser-research-agent research \
+  --objective "verify the health endpoint and fixture processing" \
+  --url "file:///app/tests/fixtures/vendor_security.html" \
+  --out /tmp/docker-smoke \
+  --report markdown
+```
 
-- [OpenAPI docs screenshot](docs/screenshots/01-openapi-docs.png)
-- [Sample report screenshot](docs/screenshots/02-sample-report.png)
-- [API JSON response screenshot](docs/screenshots/03-api-json-response.png)
-- [Quality gates screenshot](docs/screenshots/04-quality-gates.png)
+## Design constraints
 
-The screenshots are generated from simulated fixtures and local test runs. They do not show a public cloud deployment, credentials, or live customer data.
+- No login/session automation.
+- No stealth scraping or CAPTCHA bypass.
+- No paywall bypass.
+- No hidden data exfiltration.
+- No required LLM dependency in the core path — scoring is heuristic and inspectable.
+- Domain-agnostic engine stays separate from domain-specific logic (parsing, heuristics, proposal templates).
 
-## Limitations
+## Extension points
 
-- Manually supplied URLs only; search discovery is a planned adapter.
-- Local CLI, local FastAPI API, and local Docker/container smoke surfaces are implemented; hosted deployment is intentionally left to project-specific review.
-- No login automation, CAPTCHA bypass, paywall bypass, stealth scraping, authentication layer, or LLM synthesis by default.
-- Scores help prioritize research review and should be checked alongside captured evidence.
-- Live web research must respect target-site terms, robots/legal constraints, and data retention requirements.
-
-## License
-
-MIT License. See `LICENSE`.
+- Search-provider URL discovery.
+- LLM synthesis constrained to captured evidence.
+- Entity extraction and claim normalization.
+- Hosted API deployment after authentication, rate limits, scope, and artifact-storage policy are defined.
+- Domain-specific layers (Upwork intelligence, real estate analysis, vendor assessment) that use this engine as foundation.
+- Lightweight review UI for screenshots and snippets.

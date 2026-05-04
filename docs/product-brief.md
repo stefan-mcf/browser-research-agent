@@ -2,9 +2,9 @@
 
 ## Concept
 
-Browser Research Agent is a research automation project for gathering verifiable web evidence. It opens web pages in a real browser, captures durable artifacts, extracts objective-relevant snippets, and scores sources with transparent heuristics.
+Browser Research Agent is a domain-agnostic research automation engine for gathering verifiable web evidence from any set of URLs. It opens web pages in a real browser, captures durable artifacts, extracts objective-relevant snippets, and scores sources with transparent heuristics.
 
-The project is designed for repeatable research workflows where reviewers need an evidence trail rather than unsupported summaries.
+The project is designed for repeatable research workflows across any domain — vendor due diligence, market research, competitor analysis, real estate intelligence, job market scanning, academic literature review, or any task where reviewers need an evidence trail rather than unsupported summaries. The engine is domain-agnostic; use cases are defined by the objective and URLs you provide.
 
 ## Value
 
@@ -29,11 +29,17 @@ The project is designed for repeatable research workflows where reviewers need a
 
 ## Best-fit use cases
 
+The engine is domain-agnostic. Use cases are defined by the objective and URLs you provide. Common domains include:
+
 - SaaS vendor due diligence and security/compliance page review.
-- Competitor research for SaaS founders and operators.
+- Market research and competitive landscape analysis.
+- Real estate intelligence and property listing analysis.
+- Job market scanning and opportunity qualification.
+- Competitor product and pricing research.
 - Procurement shortlist scoring.
 - Lead qualification with evidence trails.
-- Market research where source quality must be explained.
+- Academic literature and citation review.
+- Any research workflow where source quality must be transparent and auditable.
 
 ## Current implementation
 

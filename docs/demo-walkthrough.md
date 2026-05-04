@@ -32,7 +32,7 @@ Then inspect:
 
 ## Review positioning
 
-Browser Research Agent is a repeatable research workflow for people who need evidence-backed findings instead of generic summaries. The included demo niche is SaaS vendor and compliance research: security pages, SOC 2 evidence, audit-reporting language, trust-center signals, and vendor-risk review.
+Browser Research Agent is a domain-agnostic research engine for evidence-backed findings instead of generic summaries. The included demo uses SaaS vendor compliance fixtures as one example domain: security pages, SOC 2 evidence, audit-reporting language, trust-center signals, and vendor-risk review. Swap the fixtures and objective — the same engine handles real estate research, job market scanning, competitor analysis, or any repeatable web research workflow.
 
 ## Proof assets
 
