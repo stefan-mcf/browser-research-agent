@@ -6,8 +6,8 @@
   "strong_candidates": 1,
   "review_candidates": 1,
   "weak_candidates": 1,
-  "summary_path": "artifacts/api-demo/summary.json",
-  "report_path": "artifacts/api-demo/report.md",
+  "summary_path": "artifacts/api-example/summary.json",
+  "report_path": "artifacts/api-example/report.md",
   "pages": [
     {
       "title": "Acme TrustHub Security and Compliance",
@@ -19,8 +19,8 @@
       "freshness": 1.0,
       "evidence_count": 8,
       "artifact_paths": {
-        "html": "artifacts/api-demo/pages/01-vendor-security-117298b5.html",
-        "json": "artifacts/api-demo/pages/01-vendor-security-117298b5.json"
+        "html": "artifacts/api-example/pages/01-vendor-security-117298b5.html",
+        "json": "artifacts/api-example/pages/01-vendor-security-117298b5.json"
       },
       "error": null
     },
@@ -34,8 +34,8 @@
       "freshness": 0.35,
       "evidence_count": 5,
       "artifact_paths": {
-        "html": "artifacts/api-demo/pages/02-vendor-blog-0da05732.html",
-        "json": "artifacts/api-demo/pages/02-vendor-blog-0da05732.json"
+        "html": "artifacts/api-example/pages/02-vendor-blog-0da05732.html",
+        "json": "artifacts/api-example/pages/02-vendor-blog-0da05732.json"
       },
       "error": null
     },
@@ -49,8 +49,8 @@
       "freshness": 0.35,
       "evidence_count": 0,
       "artifact_paths": {
-        "html": "artifacts/api-demo/pages/03-vendor-careers-b45230f2.html",
-        "json": "artifacts/api-demo/pages/03-vendor-careers-b45230f2.json"
+        "html": "artifacts/api-example/pages/03-vendor-careers-b45230f2.html",
+        "json": "artifacts/api-example/pages/03-vendor-careers-b45230f2.json"
       },
       "error": null
     }

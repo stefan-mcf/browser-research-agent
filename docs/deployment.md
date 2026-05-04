@@ -7,14 +7,14 @@ Browser Research Agent includes a local FastAPI service and container contract t
 - Runtime surface: local FastAPI API over the Playwright research core.
 - Container status: local Docker image and Compose service are defined.
 - Authentication: not implemented; keep the service local or otherwise access-controlled until an auth boundary is added.
-- Secrets: none required for the local fixture-backed demo.
+- Secrets: none required for the local fixture-backed example.
 - Public exposure: possible only after authentication, rate limits, storage policy, and target-site usage review are implemented.
 
 ## Local prerequisites
 
 - Docker Desktop or Docker Engine.
 - Network access during image build to install Python packages and Playwright Chromium dependencies.
-- No provider credentials are required for the fixture-backed demo.
+- No provider credentials are required for the fixture-backed example.
 
 ## Build the image
 
@@ -123,14 +123,14 @@ docker compose down
 | `PORT` | `8000` | No | Used by the Docker command to bind Uvicorn inside the container. |
 | `BROWSER_RESEARCH_AGENT_NO_SANDBOX` | `0` locally, `1` in Docker | No | Adds Chromium `--no-sandbox` for containerized runs. Keep disabled for normal local browser runs unless your environment requires it. |
 
-`.env.example` is included for local runtime notes. The current local demo does not require API keys or credentials.
+`.env.example` is included for local runtime notes. The current local example does not require API keys or credentials.
 
 ## Secrets policy
 
 - Do not commit `.env`, API keys, cookies, browser profiles, account exports, or customer data.
-- Keep demo inputs simulated unless a live-target review explicitly approves otherwise.
+- Keep example inputs simulated unless a live-target review explicitly approves otherwise.
 - If a future LLM/search provider is added, document required variables in `.env.example` with empty values only.
-- If a future public demo is deployed, add authentication and rate limiting before exposing `/research`.
+- If a public deployment is added, add authentication and rate limiting before exposing `/research`.
 
 ## Candidate cloud targets
 
@@ -170,7 +170,7 @@ Do not deploy publicly until these are implemented for the target environment:
 - [ ] `ruff check .`
 - [ ] `mypy src`
 - [ ] `pytest -q`
-- [ ] `bash examples/demo-command.sh`
+- [ ] `bash examples/run-example.sh`
 - [ ] `docker build -t browser-research-agent:local .`
 - [ ] container `/health` smoke test with `--shm-size=2g`
 - [ ] container `POST /research` smoke test against simulated pages

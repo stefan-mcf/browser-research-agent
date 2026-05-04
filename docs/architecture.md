@@ -25,7 +25,7 @@ Browser Research Agent is a local-first research automation tool. It uses a real
 
 ## Artifact lifecycle
 
-Generated crawl artifacts are written under `artifacts/` and ignored by git. The repo should commit only source code, tests, docs, and stable fixtures. Live crawl outputs should be regenerated during demos rather than versioned.
+Generated crawl artifacts are written under `artifacts/` and ignored by git. The repo should commit only source code, tests, docs, and stable fixtures. Live crawl outputs should be regenerated during runs rather than versioned.
 
 ## Safety boundaries
 

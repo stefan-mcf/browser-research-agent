@@ -9,10 +9,10 @@ browser-research-agent research \
   --url "file://${REPO_ROOT}/tests/fixtures/vendor_security.html" \
   --url "file://${REPO_ROOT}/tests/fixtures/vendor_blog.html" \
   --url "file://${REPO_ROOT}/tests/fixtures/vendor_careers.html" \
-  --out artifacts/demo \
+  --out artifacts/example \
   --report markdown
 
-printf '\nReport written to artifacts/demo/report.md\n'
+printf '\nReport written to artifacts/example/report.md\n'
 
 # Other example objectives (swap fixtures to match):
 #   "identify pricing tiers, target segments, and competitive positioning across these SaaS pages"

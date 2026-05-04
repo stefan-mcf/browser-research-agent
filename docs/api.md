@@ -57,7 +57,7 @@ curl -fsS -X POST http://127.0.0.1:8000/research \
       \"file://$PWD/tests/fixtures/vendor_blog.html\",
       \"file://$PWD/tests/fixtures/vendor_careers.html\"
     ],
-    \"out_dir\": \"artifacts/api-demo\",
+    \"out_dir\": \"artifacts/api-example\",
     \"include_screenshots\": false,
     \"report\": \"markdown\"
   }" | python -m json.tool

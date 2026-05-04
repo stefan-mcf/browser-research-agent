@@ -33,10 +33,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev,api]'
 python -m playwright install chromium
-bash examples/demo-command.sh
+bash examples/run-example.sh
 ```
 
-The demo uses simulated local fixtures and writes outputs under `artifacts/demo`.
+The example uses simulated local fixtures and writes outputs under `artifacts/example`.
 
 ## CLI
 
@@ -84,16 +84,16 @@ Useful local endpoints:
 
 See `docs/api.md` for request examples and safety boundaries. Add authentication, rate limits, storage policy, and deployment review before exposing the API beyond trusted local environments.
 
-## Demo package
+## Bundled examples
 
-The bundled demo uses SaaS vendor compliance fixtures as one example domain. The core engine is domain-agnostic — swap the fixtures and objective to target any research domain.
+The bundled examples use SaaS vendor compliance fixtures as one example domain. The core engine is domain-agnostic — swap the fixtures and objective to target any research domain.
 
 - `examples/request.json`: sample request shape.
-- `examples/demo-command.sh`: repeatable local demo command (vendor compliance domain).
+- `examples/run-example.sh`: repeatable local example command (vendor compliance domain).
 - `examples/sample-output/`: curated sample report and summary JSON generated from simulated pages.
 - `examples/api-sample-output/research-response.json`: sanitized sample `POST /research` response.
-- `docs/demo-walkthrough.md`: short demo walkthrough.
-- `tests/fixtures/*.html`: simulated pages used for stable demos and tests.
+- `docs/walkthrough.md`: step-by-step walkthrough.
+- `tests/fixtures/*.html`: simulated pages used for stable examples and tests.
 - `docs/product-brief.md`: broader product concept and extension points.
 - `docs/architecture.md`: implementation architecture and data flow.
 - `docs/output-schema.md`: JSON output contract.

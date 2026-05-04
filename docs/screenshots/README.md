@@ -23,7 +23,7 @@ From the repo root:
 
 ```bash
 source .venv/bin/activate
-bash examples/demo-command.sh
+bash examples/run-example.sh
 uvicorn browser_research_agent.api:app --host 127.0.0.1 --port 8012
 python scripts/generate_screenshot_evidence.py
 ```
