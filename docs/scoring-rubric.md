@@ -26,4 +26,4 @@ Browser Research Agent uses a clear scoring system so users can understand how s
 
 - The score reflects the relevance and credibility of captured evidence; it does not guarantee that a claim is true.
 - Domain and text analysis methods are designed to be conservative and verifiable.
-- Any future AI-generated synthesis should cite captured evidence rather than replace this scoring system.
+- Any AI-generated synthesis should cite captured evidence rather than replace this scoring system.

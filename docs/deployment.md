@@ -1,6 +1,6 @@
 # Deployment Preparation
 
-Browser Research Agent includes a local FastAPI service and container contract that can be used for local smoke testing or adapted for a future hosted deployment. The default project state is local-first: no cloud resources, public URLs, paid provider services, or release tags are created by the repository itself.
+Browser Research Agent includes a local FastAPI service and container contract that can be used for local smoke testing or adapted for a hosted deployment. The default project state is local-first: no cloud resources, public URLs, paid provider services, or release tags are created by the repository itself.
 
 ## Current deployment posture
 
@@ -129,7 +129,7 @@ docker compose down
 
 - Do not commit `.env`, API keys, cookies, browser profiles, account exports, or customer data.
 - Keep example inputs simulated unless a live-target review explicitly approves otherwise.
-- If a future LLM/search provider is added, document required variables in `.env.example` with empty values only.
+- If a LLM/search provider is added, document required variables in `.env.example` with empty values only.
 - If a public deployment is added, add authentication and rate limiting before exposing `/research`.
 
 ## Candidate cloud targets
@@ -161,7 +161,7 @@ Do not deploy publicly until these are implemented for the target environment:
 - [ ] Rate limiting / request size limits suitable for public access.
 - [ ] Storage retention policy for captured HTML/screenshots.
 - [ ] Target-site usage policy and robots/legal review for live crawling.
-- [ ] Secret management for any future provider credentials.
+- [ ] Secret management for any provider credentials.
 - [ ] Observability/log redaction plan.
 - [ ] Cloud provider, region, cost ceiling, and teardown policy.
 

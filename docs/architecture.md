@@ -4,7 +4,7 @@ Browser Research Agent is a local-first research automation tool. It uses a real
 
 ## Module map
 
-- `config.py`: validated run configuration shared by CLI, browser runner, and future adapters.
+- `config.py`: validated run configuration shared by CLI, browser runner, and additional adapters.
 - `agent.py`: Playwright orchestration, page capture, artifact writing, and run summary persistence.
 - `extractor.py`: HTML parsing, visible-text extraction, metadata extraction, link normalization, and evidence snippet selection.
 - `scoring.py`: repeatable relevance, credibility, freshness, and confidence scoring.
